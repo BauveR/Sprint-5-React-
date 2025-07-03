@@ -1,4 +1,7 @@
-import Button from "./components /atoms/Button.jsx";
+import Counter from "./components /atoms/Counter.jsx";
+import Text from "./components /atoms/Text2.jsx";
+
+
 
 export default function App() {
   return (
@@ -6,7 +9,10 @@ export default function App() {
       <h1 className="text-4xl font-bold text-blue-600 mb-4">
         ¡Hola Tailwind + React!
       </h1>
-      <Button onClick={() => alert("Botón clicado")}>Haz clic aquí</Button>
+      <Counter />
+      <Text />
+     
+      
     </div>
   );
 }
