@@ -13,11 +13,12 @@ const TextH2 = () => {
 
         console.log("El texto montado");
 
-        return () => {
-            console.log("El texto ha sido desmontado");
+return () => {
+            console.log("El texto desmontado");
         }
     },[]);
 
+ 
     return(
 
         <div>

@@ -1,18 +1,15 @@
-import Counter from "./components /atoms/Counter.jsx";
-import Text from "./components /atoms/Text2.jsx";
+// App.jsx
+import { Button } from "../components /atoms/Buttton.jsx";
 
-
-
-export default function App() {
+function App() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-600 mb-4">
-        ¡Hola Tailwind + React!
-      </h1>
-      <Counter />
-      <Text />
-     
-      
+    <div className="space-y-4 p-6 bg-gray-900 min-h-screen">
+      <Button variant="primary">Primary</Button>
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="ghost">Ghost</Button>
+      <Button variant="outlined">Outlined</Button>
     </div>
   );
 }
+
+export default App;
