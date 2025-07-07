@@ -1,5 +1,5 @@
-// App.jsx
-import { Button } from "../components /atoms/Buttton.jsx";
+import { Button } from "./components/atoms/Button";
+
 
 function App() {
   return (
