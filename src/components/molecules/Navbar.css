@@ -1,0 +1,18 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 1rem;
+    background-color: var(--full-white);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .navbar-logo-container {
+    flex-shrink: 0;
+  }
+  
+  .navbar-buttons-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
