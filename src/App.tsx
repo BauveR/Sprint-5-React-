@@ -35,21 +35,36 @@ function App() {
       <div>
       {/* Versión izquierda (por defecto) */}
       <BlueShape height="300px">
-        <h2>Forma izquierda</h2>
-        <p>Bordes redondeados en el lado izquierdo</p>
+      <div style={{ maxWidth: '80%' }}>
+        <img 
+      src="/src/assets/illustration-features-tab-1.svg" 
+      alt="Descripción de la imagen"
+      style={{
+        width: '100%',
+        maxWidth: '500px',
+        height: 'auto',
+        borderRadius: '8px',
+        boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
+      }}
+    />
+        </div>
       </BlueShape>
 
-      {/* Versión derecha */}
-      <BlueShape align="right" height="350px" className="custom-class">
-        <h2>Forma derecha</h2>
-        <p>Bordes redondeados en el lado derecho</p>
-      </BlueShape>
 
       {/* Versión derecha con contenido alineado */}
       <BlueShape align="right" height="400px">
         <div style={{ maxWidth: '80%' }}>
-          <h3>Contenido destacado</h3>
-          <p>Texto alineado a la derecha con forma en ese lado</p>
+        <img 
+      src="/src/assets/illustration-features-tab-1.svg" 
+      alt="Descripción de la imagen"
+      style={{
+        width: '100%',
+        maxWidth: '500px',
+        height: 'auto',
+        borderRadius: '8px',
+        boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
+      }}
+    />
         </div>
       </BlueShape>
     </div>
