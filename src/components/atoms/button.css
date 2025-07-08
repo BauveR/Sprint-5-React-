@@ -46,7 +46,7 @@ button {
     color: var(--full-white); /* Texto blanco para mejor contraste */
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-xl);
     border-radius: var(--border-radius-md);
     border: 2px solid transparent; /* Borde transparente inicial */
     transition: all 0.3s ease; /* Transición suave */
@@ -57,7 +57,7 @@ button {
     background-color: var(--full-white); /* Color secundario al hacer hover */
     color: var(--secondary-color); /* Mantener texto blanco */
     border-color: var(--secondary-color); /* Borde del mismo color */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 6px 5px 10px var(--transparent-grey);
 }
 
 .btn--navbutton {
@@ -73,7 +73,8 @@ button {
 .btn--navbutton:hover {
     background-color: var(--full-white); /* Color secundario al hacer hover */
     color: var(--secondary-color); /* Mantener texto blanco */
-    border-color: var(--secondary-color); /* Borde del mismo color */
+    border-color: var(--secondary-color); 
+    font-weight: var(--font-weight-bold);
 }
 
 .btn--outlined {

@@ -12,7 +12,7 @@
   --neutral-dark-blue: #242946;
   --neutral-very-dark-blue: #1d1d1d;
   --dark-blue-transparent: rgba(36, 41, 70, 0.95);
-  --transparent-grey: rgba(255, 255, 255, 0.15);
+  --transparent-grey: rgba(18, 17, 17, 0.266);
 
   /* Typography */
   --font-family: sans-serif;
@@ -28,7 +28,7 @@
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
-  --font-weight-bold: 700;
+  --font-weight-bold: 550;
 
   /* Spacing */
   --spacing-xs: 8px;
