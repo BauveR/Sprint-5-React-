@@ -1,0 +1,16 @@
+
+.text{
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    line-height: 1.5;
+    color: var(--neutral-gray);
+    display: block;
+    width: 100%;
+}
+
+.text.center{
+    text-align: center;
+ 
+}

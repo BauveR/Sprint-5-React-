@@ -15,7 +15,8 @@
   --transparent-grey: rgba(255, 255, 255, 0.15);
 
   /* Typography */
-  --font-family: 'Lato', sans-serif;
+  --font-family: sans-serif;
+  --font-family-two: 'Lato';
   --font-size-xs: 14px;
   --font-size-sm: 16px;
   --font-size-md: 18px;
