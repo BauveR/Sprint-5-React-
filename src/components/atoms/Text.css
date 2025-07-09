@@ -8,6 +8,8 @@
     color: var(--neutral-gray);
     display: block;
     width: 100%;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-regular);
 }
 
 .text.center{

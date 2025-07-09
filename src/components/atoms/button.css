@@ -8,37 +8,43 @@ button {
 }
 
 .btn--primary {
-    background-color: var(--primary-color);
-    color: var(--full-white);
+    background-color: var(--primary-color); 
+    color: var(--full-white); /* Texto blanco para mejor contraste */
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-xl);
     border-radius: var(--border-radius-md);
-    box-shadow: var(--shadow-lg);
+    border: 2px solid transparent; /* Borde transparente inicial */
+    transition: all 0.3s ease; /* Transición suave */
+    cursor: pointer;
 }
 
 .btn--primary:hover {
-    background-color: var(--neutral-off-white);
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    font-weight: 600;
+    background-color: var(--full-white); /* Color secundario al hacer hover */
+    color: var(--primary-color); /* Mantener texto blanco */
+    border-color: var(--primary-color); /* Borde del mismo color */
+    box-shadow: 6px 5px 10px var(--transparent-grey);
 }
 
 .btn--ghost {
-    background-color: var(--neutral-off-white);
-    color: var(--neutral-very-dark-blue);
+
+    background-color: var(--neutral-off-whit); /* Color gris inicial */
+    color: var(--neutral-very-dark-blue); /* Texto blanco para mejor contraste */
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-xl);
     border-radius: var(--border-radius-md);
-    box-shadow: var(--shadow-sm);
+    border: 2px solid transparent; /* Borde transparente inicial */
+    transition: all 0.3s ease; /* Transición suave */
+    cursor: pointer;
 }
 
 .btn--ghost:hover {
-    background-color: var(--neutral-off-white);
-    border: 2px solid var(--neutral-dark-blue);
-    color: var(--neutral-dark-blue);
-    font-weight: 600;
+
+    background-color: var(--neutral-off-white); /* Color secundario al hacer hover */
+    color: var(--neutral-dark-blue); /* Mantener texto blanco */
+    border-color: var(--neutral-dark-blue); /* Borde del mismo color */
+    box-shadow: 6px 5px 10px var(--transparent-grey);
 }
 
 .btn--secondary {

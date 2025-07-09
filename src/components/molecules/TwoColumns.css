@@ -1,0 +1,49 @@
+.two-columns {
+    display: flex;
+    width: 80%; /* Ancho al 70% de la página */
+    margin: var(--spacing-xxxl) auto; /* Centrado horizontal */
+    max-width: 1500px; /* Máximo ancho para pantallas grandes */
+  }
+  
+  .left-col {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+  
+  .right-col {
+    flex: 1;
+    position: relative;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .two-columns {
+      width: 85%; /* Un poco más ancho en tablets */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .two-columns {
+      width: 90%; /* Más ancho en móviles */
+      flex-direction: column;
+    }
+    
+    .right-col {
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .two-columns {
+      width: 95%; /* Casi ancho completo en móviles pequeños */
+    }
+  }
