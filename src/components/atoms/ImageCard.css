@@ -1,0 +1,43 @@
+/* Contenedor principal */
+.image-card-container {
+    margin: 1rem 0; /* Margen vertical */
+    padding: 0.5rem; /* Espacio interno */
+    box-sizing: 200px; /* Incluye padding en el ancho total */
+    display: inline-block; /* Ajusta al contenido */
+    max-width: 100%; /* No exceder el ancho del contenedor padre */
+  }
+  
+  /* La imagen en sí */
+  .image-card {
+    height: auto; /* Mantiene proporciones */
+    display: block; /* Elimina espacio inferior por inline */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  }
+  
+  /* Efecto hover para interactividad */
+  .image-card:hover {
+    transform: translateY(-2px); /* Levanta ligeramente */
+    
+  }
+  
+  /* Clases de margen adicionales (opcionales) */
+  .margin-sm {
+    margin: 0.5rem;
+  }
+  
+  .margin-md {
+    margin: 1rem;
+  }
+  
+  .margin-lg {
+    margin: 1.5rem;
+  }
+  
+  .margin-top {
+    margin-top: 1rem;
+  }
+  
+  .margin-bottom {
+    margin-bottom: 1rem;
+  }
