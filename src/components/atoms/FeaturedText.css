@@ -12,3 +12,10 @@
 .featuredtext.center {
     text-align: center;
 }
+
+.featuredtext.xxl{
+    text-align: center;
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-md);
+   
+}

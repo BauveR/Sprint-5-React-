@@ -7,54 +7,61 @@ import SvgIcon from '../atoms/SvgIcon'; // Asegúrate de que la ruta sea correct
 import './Card.css';
 
 interface CardProps {
-  imageSrc: string;
-  imageAlt: string;
-  featuredText: string;
-  description: string;
-  svgIconSrc?: string; // Cambiado a svgIconSrc para mayor claridad
-  svgIconAlt?: string;
-  buttonText: string;
-  onButtonClick: () => void;
-}
-
-const Card: React.FC<CardProps> = ({
-  imageSrc,
-  imageAlt,
-  featuredText,
-  description,
-  svgIconSrc,
-  svgIconAlt = "divider", // Valor por defecto
-  buttonText,
-  onButtonClick
-}) => {
-  return (
-    <div className="card">
-      <div className="card-image-container">
-        <ImageCard src={imageSrc} alt={imageAlt} width="100%" />
-      </div>
-      
-      <div className="card-content">
-        <FeaturedText center={true}>{featuredText}</FeaturedText>
-        <TextSecondary center={true}>{description}</TextSecondary>
-      </div>
-      
-      {svgIconSrc && (
-        <div className="svg-container">
-          <SvgIcon 
-            src={svgIconSrc} 
-            alt={svgIconAlt}
-            width="100%"
-          />
+    imageSrc: string;
+    imageAlt: string;
+    featuredText: string; // Añadido el texto destacado como prop
+    featuredTextSize?: 'xxl' | 'default'; // Prop para controlar el tamaño
+    description: string;
+    svgIconSrc?: string;
+    svgIconAlt?: string;
+    buttonText: string;
+    onButtonClick: () => void;
+  }
+  
+  const Card: React.FC<CardProps> = ({
+    imageSrc,
+    imageAlt,
+    featuredText,
+    featuredTextSize = 'default',
+    description,
+    svgIconSrc,
+    svgIconAlt = "divider",
+    buttonText,
+    onButtonClick
+  }) => {
+    return (
+      <div className="card">
+        <div className="card-image-container">
+          <ImageCard src={imageSrc} alt={imageAlt} width="100%" />
         </div>
-      )}
-      
-      <div className="card-button-container">
-        <Button variant="primary" onClick={onButtonClick}>
-          {buttonText}
-        </Button>
+        
+        <div className="card-content">
+          <FeaturedText 
+            center={true}
+            className={featuredTextSize === 'xxl' ? 'xxl' : ''}
+          >
+            {featuredText}
+          </FeaturedText>
+          <TextSecondary center={true}>{description}</TextSecondary>
+        </div>
+        
+        {svgIconSrc && (
+          <div className="svg-container">
+            <SvgIcon 
+              src={svgIconSrc} 
+              alt={svgIconAlt}
+              width="100%"
+            />
+          </div>
+        )}
+        
+        <div className="card-button-container">
+          <Button variant="primary" onClick={onButtonClick}>
+            {buttonText}
+          </Button>
+        </div>
       </div>
-    </div>
-  );
-};
-
-export default Card;
+    );
+  };
+  
+  export default Card;
