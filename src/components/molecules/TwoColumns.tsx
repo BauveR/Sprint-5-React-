@@ -7,13 +7,13 @@ import './TwoColumns.css';
 
 
 interface TwoColumnsProps {
-  title: string;
-  description: string;
-  imageUrl: string;
-  primaryButtonText: string;
-  ghostButtonText: string;
-  onPrimaryClick: () => void;
-  onGhostClick: () => void;
+  title?: string;
+  description?: string;
+  imageUrl?: string;
+  primaryButtonText?: string;
+  ghostButtonText?: string;
+  onPrimaryClick?: () => void;
+  onGhostClick?: () => void;
 }
 
 const TwoColumns: React.FC<TwoColumnsProps> = ({
