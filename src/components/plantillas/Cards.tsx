@@ -2,8 +2,10 @@
 import React from 'react';
 import ThreeCardsLayout from '../molecules/ThreeCardsLayout';
 
+type CardData = Parameters<typeof ThreeCardsLayout>[0]['cards'][number];
+
 const Cards: React.FC = () => {
-  const cardsData = [
+    const cardsData: CardData[] =[
     {
       imageSrc: "src/assets/logo-chrome.svg",
       imageAlt: "Chrome extension",
@@ -37,12 +39,11 @@ const Cards: React.FC = () => {
   ];
 
   return (
-    <section className="cards-section">
-      <ThreeCardsLayout 
-        cards={cardsData} 
-        alignment="staggered" 
-      />
-    </section>
+    <ThreeCardsLayout 
+      cards={cardsData} 
+      alignment="staggered" 
+    />
+ 
   );
 };
 
