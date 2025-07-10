@@ -26,4 +26,4 @@ const TextSecondary = ({
   );
 };
 
-export default TextSecondary;
+export default TextSecondary; 

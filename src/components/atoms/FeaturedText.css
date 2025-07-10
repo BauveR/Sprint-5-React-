@@ -19,3 +19,9 @@
     margin-bottom: var(--spacing-md);
    
 }
+
+.featuredtext.white {
+    text-align: center;
+    font-size: var(--font-size-xxl);
+    color: var( --full-white);
+}

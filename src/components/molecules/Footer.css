@@ -1,0 +1,79 @@
+  
+  /* Sección Superior - Email Subscription */
+  .footer-top-section {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 3rem 1rem;
+  }
+  
+  .footer-email-content {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+  }
+  
+  .footer-email-form {
+    display: flex;
+    gap: var(--spacing-md);
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  .footer-email-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    border: none;
+    font-size: 1rem;
+    min-width: 200px; /* Mejor experiencia en mobile */
+  }
+  
+  /* Sección Inferior - Navigation */
+  .footer-bottom-section {
+    background-color: var(--neutral-very-dark-blue);
+    padding: 2rem 1rem;
+  }
+  
+  .footer-nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-nav-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+  }
+  
+  .footer-logo {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .footer-nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-email-form {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .footer-nav-buttons {
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .footer-nav-buttons .btn--navbutton {
+      width: 100%;
+      text-align: center;
+    }
+  }
