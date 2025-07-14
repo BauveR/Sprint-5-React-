@@ -4,8 +4,9 @@ import Hero from './components/plantillas/Hero';
 import Cards from './components/plantillas/Cards';
 import Footer from './components/molecules/Footer';
 import Acordion from './components/plantillas/Acordion';
-import UnderlineTab from './components/molecules/Tab';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+import  TabCarouselContainer  from './components/molecules/TabCarouselContainer';
 
 
 
@@ -14,8 +15,9 @@ function App() {
     <div>
       <Header/>
       <Hero/>
+      <TabCarouselContainer/>
       <Cards/>
-      <UnderlineTab/>
+      
       <Acordion
         featuredText="Frequently Asked Questions"
         featuredTextSize="xxl"

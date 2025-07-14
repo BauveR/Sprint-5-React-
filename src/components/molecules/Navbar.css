@@ -1,14 +1,15 @@
 .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 2rem 1rem;
     background-color: var(--full-white);
     box-shadow: var(--shadow-sm);
+    margin-right: var(--spacing-xxxl);
   }
   
   .navbar-logo-container {
-    flex-shrink: 0;
+    margin-left:var(--spacing-xxxl);
   }
   
   .navbar-buttons-wrapper {

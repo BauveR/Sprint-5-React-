@@ -1,0 +1,48 @@
+.tab-carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  gap: 3rem;
+}
+
+.tabs-section {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.custom-nav-underline {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  border-bottom: none;
+}
+
+.carousel-section {
+  width: 100%;
+}
+
+
+
+
+
+.nav-underline .nav-link.active {
+  color: #3366cc;
+  background: transparent;
+  border-bottom: 3px solid #3366cc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tab-carousel-container {
+    gap: 1.5rem;
+  }
+  
+  .custom-nav-underline {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
