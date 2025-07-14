@@ -14,7 +14,7 @@ interface AcordionProps {
   onButtonClick: () => void;
 }
 
-function BasicExample({
+function Acordion({
   featuredText,
   featuredTextSize = 'default',
   description,
@@ -83,4 +83,4 @@ function BasicExample({
 );
 }
 
-export default BasicExample;
+export default Acordion;

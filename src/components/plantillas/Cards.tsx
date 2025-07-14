@@ -1,4 +1,3 @@
-// components/plantillas/Cards.tsx
 import React from 'react';
 import ThreeCardsLayout from '../molecules/ThreeCardsLayout';
 

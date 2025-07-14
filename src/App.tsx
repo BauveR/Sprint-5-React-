@@ -3,7 +3,8 @@ import Header from './components/plantillas/Header';
 import Hero from './components/plantillas/Hero';
 import Cards from './components/plantillas/Cards';
 import Footer from './components/molecules/Footer';
-import BasicExample from './components/plantillas/Acordion';
+import Acordion from './components/plantillas/Acordion';
+import UnderlineTab from './components/molecules/Tab';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -11,10 +12,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div>
-      <Header />
-      <Hero />
+      <Header/>
+      <Hero/>
       <Cards/>
-      <BasicExample
+      <UnderlineTab/>
+      <Acordion
         featuredText="Frequently Asked Questions"
         featuredTextSize="xxl"
         description="Here are some of our FAOs. If vou have anv other questions.
