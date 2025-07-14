@@ -16,3 +16,9 @@
     text-align: center;
  
 }
+
+.text-white{
+    color: var(--full-white);
+
+
+}

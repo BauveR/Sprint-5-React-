@@ -1,7 +1,7 @@
 import "./Button.css";
 
 type ButtonProps = {
-	variant: "primary" | "secondary" | "ghost" | "outlined"| "navbutton";
+	variant: "primary" | "secondary" | "ghost" | "outlined"| "navbutton"| "footer";
 	onClick?: () => void;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
@@ -11,7 +11,8 @@ export const Button = ({ variant, children, onClick }: ButtonProps) => {
 		secondary: "btn--secondary",
 		ghost: "btn--ghost",
 		outlined: "btn--outlined",
-        navbutton: "btn--navbutton"
+        navbutton: "btn--navbutton",
+        footer: "btn--footer"
 	};
 
 	const className = classMap[variant] || classMap.primary;

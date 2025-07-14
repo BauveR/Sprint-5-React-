@@ -22,7 +22,7 @@ interface FooterProps {
     navItems: Array<{
       label: string;
       onClick: () => void;
-      variant?: 'primary' | 'secondary' | 'ghost' | 'outlined' | 'navbutton';
+      variant?: 'primary' | 'secondary' | 'ghost' | 'outlined' | 'navbutton'| 'footer';
     }>;
   };
 }
@@ -41,13 +41,14 @@ const Footer: React.FC<FooterProps> = ({ emailSection, navigationSection }) => {
       {/* Sección Superior Independiente - Email */}
       <section className="footer-top-section">
         <div className="footer-email-content">
+         
+          <TextSecondary center={true}>{emailSection.secondaryText}</TextSecondary>
           <FeaturedText 
             center 
             white 
           >
             {emailSection.featuredText}
           </FeaturedText>
-          <TextSecondary center={true}>{emailSection.secondaryText}</TextSecondary>
           
           <form onSubmit={handleSubmit} className="footer-email-form">
             <input
@@ -64,31 +65,30 @@ const Footer: React.FC<FooterProps> = ({ emailSection, navigationSection }) => {
           </form>
         </div>
       </section>
-
       {/* Sección Inferior Independiente - Navegación */}
-      <footer className="footer-bottom-section">
-        <div className="footer-nav-content">
-          <div className="footer-logo">
-            <Logo 
-              src={navigationSection.logo.src} 
-              alt={navigationSection.logo.alt} 
-              width={navigationSection.logo.width} 
-            />
-          </div>
-          
-          <div className="footer-nav-buttons">
-            {navigationSection.navItems.map((item, index) => (
-              <Button
-                key={`footer-nav-${index}`}
-                variant={item.variant || 'navbutton'}
-                onClick={item.onClick}
-              >
-                {item.label}
-              </Button>
-            ))}
-          </div>
-        </div>
-      </footer>
+<footer className="footer-bottom-section">
+  <div className="footer-nav-content">
+    <div className="footer-logo">
+      <Logo 
+        src={navigationSection.logo.src} 
+        alt={navigationSection.logo.alt} 
+        width={navigationSection.logo.width} 
+      />
+    </div>
+    
+    <div className="footer-nav-buttons">
+      {navigationSection.navItems.map((item, index) => (
+        <Button
+          key={`footer-nav-${index}`}
+          variant={item.variant || 'footer'}
+          onClick={item.onClick}
+        >
+          {item.label}
+        </Button>
+      ))}
+    </div>
+  </div>
+</footer>
     </>
   );
 };

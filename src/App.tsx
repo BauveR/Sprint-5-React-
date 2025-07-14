@@ -1,7 +1,12 @@
-import Header from './components/plantillas/header';
+
+import Header from './components/plantillas/Header';
 import Hero from './components/plantillas/Hero';
 import Cards from './components/plantillas/Cards';
-import Footer from './components/molecules/footer';
+import Footer from './components/molecules/Footer';
+import BasicExample from './components/plantillas/Acordion';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 function App() {
   return (
@@ -9,6 +14,15 @@ function App() {
       <Header />
       <Hero />
       <Cards/>
+      <BasicExample
+        featuredText="Frequently Asked Questions"
+        featuredTextSize="xxl"
+        description="Here are some of our FAOs. If vou have anv other questions.
+                    you'd like answered please feel free to email us."
+        buttonText="More info"
+        onButtonClick={() => console.log('Botón clickeado')}
+      />
+  
       <Footer
         emailSection={{
           
@@ -20,17 +34,18 @@ function App() {
         }}
         navigationSection={{
           logo: {
-            src: "/logo-white.svg",
+            src: "src/assets/logo-bookmark-white.svg",
             alt: "Logo de la empresa",
             width: "180px"
           },
           navItems: [
-            { label: "Inicio", onClick: () => {} },
-            { label: "Productos", onClick: () => {}, variant: "ghost" },
-            { label: "Contacto", onClick: () => {} }
+            { label: "FEATURES", onClick: () => {} },
+            { label: "PRICING", onClick: () => {},},
+            { label: "CONTACT", onClick: () => {} }
           ]
         }}
       />
+
       
     </div>
   );

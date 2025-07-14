@@ -1,0 +1,71 @@
+.acordion-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    gap: 2rem;
+  }
+  
+  .acordion-header {
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .acordion-content {
+    width: 80%;
+    max-width: 800px;
+  }
+  
+  .card-button-container {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  /* Estilos para el Accordion */
+  .accordion {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .accordion-item {
+    margin-bottom: 1rem;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .accordion-header button {
+    font-weight: 600;
+    background-color: var (--primary-light);
+  }
+  
+  .accordion-header button:not(.collapsed) {
+    background-color:var (--secondary-color);
+  }
+  
+  .accordion-body {
+    background-color: #fff;
+  }
+  
+  /* Media query para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .acordion-container {
+      padding: 1rem;
+      gap: 1.5rem;
+    }
+    
+    .acordion-container.staggered {
+      display: flex;
+    }
+    
+    .acordion-content {
+      width: 100%;
+    }
+  }
+  
