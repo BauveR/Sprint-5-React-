@@ -1,64 +1,52 @@
 
 import Carousel from 'react-bootstrap/Carousel';
-import BlueShape from '../atoms/BlueShape';
+import TabColumn from './Tabcolumn';
 
 interface ControlledCarouselProps {
-  activeIndex: number;
-  onSelect: (selectedIndex: number) => void;
-}
-
-function ControlledCarousel({ activeIndex, onSelect }: ControlledCarouselProps) {
-  return (
-    <Carousel activeIndex={activeIndex} onSelect={onSelect} indicators={false}>
-      <Carousel.Item>
-        <BlueShape align="right" height="500px">
-          <div className="blue-shape-content">
-            <img
-              src="/src/assets/illustration-features.svg"
-              alt="Simple Bookmarking"
-              className="image-medium image-right"
-            />
-          </div>
-        </BlueShape>
-        <Carousel.Caption className="custom-caption">
-          <h3>Simple Bookmarking</h3>
-          <p>Organize your bookmarks however you like.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      
-      <Carousel.Item>
-        <BlueShape align="right" height="500px">
-          <div className="blue-shape-content">
-            <img
-              src="/src/assets/illustration-features.svg"
-              alt="Speedy Searching"
-              className="image-medium image-right"
-            />
-          </div>
-        </BlueShape>
-        <Carousel.Caption className="custom-caption">
-          <h3>Speedy Searching</h3>
-          <p>Find your saved sites in no time at all.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      
-      <Carousel.Item>
-        <BlueShape align="right" height="500px">
-          <div className="blue-shape-content">
-            <img
-              src="/src/assets/illustration-features.svg"
-              alt="Easy Sharing"
-              className="image-medium image-right"
-            />
-          </div>
-        </BlueShape>
-        <Carousel.Caption className="custom-caption">
-          <h3>Easy Sharing</h3>
-          <p>Share your bookmarks with others easily.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-  );
-}
-
-export default ControlledCarousel;
+    activeIndex: number;
+    onSelect?: (selectedIndex: number) => void; // Hacer opcional para evitar advertencias
+  }
+  
+  function ControlledCarousel({ activeIndex, onSelect }: ControlledCarouselProps) {
+    return (
+      <Carousel 
+        activeIndex={activeIndex} 
+        onSelect={onSelect} 
+        indicators={false}
+        controls={false}   
+        touch={false} 
+        keyboard={false} 
+        interval={null} 
+        pause={false} 
+      >
+        <Carousel.Item>
+          <TabColumn
+            title="Bookmark in one click"
+            description="Urganize your bookmarks nowever you lke. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites."
+            imageUrl="src/assets/illustration-features-tab-1.svg"
+            primaryButtonText="More Info"
+            onPrimaryClick={() => console.log('Primary button clicked')}></TabColumn>
+        </Carousel.Item>
+        
+        <Carousel.Item>
+        <TabColumn
+            title="Intelligent search"
+            description="Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks."
+            imageUrl="src/assets/illustration-features-tab-2.svg"
+            primaryButtonText="More Info"
+            onPrimaryClick={() => console.log('Primary button clicked')}></TabColumn>
+        </Carousel.Item>
+        
+        <Carousel.Item>
+        <TabColumn
+            title="Share your bookmarks"
+            description="Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button."
+            imageUrl="src/assets/illustration-features-tab-3.svg"
+            primaryButtonText="More Info"
+            onPrimaryClick={() => console.log('Primary button clicked')}></TabColumn>
+        </Carousel.Item>
+      </Carousel>
+    );
+  }
+  
+  export default ControlledCarousel;

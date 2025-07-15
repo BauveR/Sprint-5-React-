@@ -2,15 +2,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1400px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 3rem 0rem;
   gap: 3rem;
 }
 
 .tabs-section {
   width: 100%;
-  margin-bottom: 2rem;
 }
 
 .custom-nav-underline {
@@ -25,14 +24,6 @@
 }
 
 
-
-
-
-.nav-underline .nav-link.active {
-  color: #3366cc;
-  background: transparent;
-  border-bottom: 3px solid #3366cc;
-}
 
 /* Responsive */
 @media (max-width: 768px) {

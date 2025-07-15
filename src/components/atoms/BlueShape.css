@@ -1,11 +1,12 @@
+/* BlueShape.css actualizado */
 .blue-shape-container {
   position: relative;
   width: 100%;
   height: 80%;
-  overflow: visible; /* Cambiado a visible para mejor control */
+  overflow: visible;
+  margin-bottom: 2rem;
 }
 
-/* Estilo del fondo azul (sin cambios) */
 .blue-shape-background {
   position: absolute;
   z-index: 0;
@@ -18,62 +19,88 @@
   border-top-left-radius: 15rem;
 }
 
-/* Variante right (simplificada) */
 .blue-shape-container.right .blue-shape-background {
   left: auto;
-  right: 10px;
+  right: 40%; /* Extiende la forma fuera del contenedor */
+
+  /* Dimensiones */
+  width: 110%; /* Ancho extendido */
+  height: 80%; /* Altura relativa */
+  
+  /* Bordes redondeados solo en lado derecho */
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  border-bottom-right-radius: 15rem;
+  border-bottom-right-radius: 15rem; /* 240px si prefieres valores fijos */
   border-top-right-radius: 15rem;
 }
 
-/* Contenedor de contenido simplificado */
 .blue-shape-content {
   position: relative;
   z-index: 1;
-  height: 130%;
+  height: 90%;
   display: flex;
+  align-items: left;
+  justify-content: flex-start;
+  margin-left: var(--spacing-xxl);
+  padding: 1rem;
 }
 
-/* Clases utilitarias para posicionamiento de imagen */
-.image-position {
-  position: absolute;
+/* Estilos para el carousel */
+.carousel .carousel-item {
+  height: 800px; /* Ajusta según necesites */
 }
 
-.image-top {
-  top: 50px;
-}
-
-.image-bottom {
-  bottom: 20px;
-}
-
-.image-left {
-  left: 20px;
-}
-
-.image-right {
-  right: 20px;
-}
-
-.image-center {
-  left: 10%;
-  transform: translateX(-10%);
-}
-
-/* Tamaño de imagen controlable */
-.image-small {
-  width: 50%;
-  height: auto;
-}
-
+/* Estilos de imagen */
 .image-medium {
-  width: 70%;
+  width:200%;
+  max-width: 900px;
   height: auto;
+  margin-right: 5rem;
 }
 
-.image-large {
-  width: 100%;
-  height: auto;
+/* Responsive */
+@media (max-width: 992px) {
+  .blue-shape-background {
+    width: 100%;
+    left: 0;
+    border-radius: 0;
+  }
+  
+  .blue-shape-container.right .blue-shape-background {
+    right: 0;
+    border-radius: 0;
+  }
+  
+  .blue-shape-content {
+    justify-content: center;
+  }
+  
+  .custom-caption {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    top: auto;
+    bottom: 2rem;
+  }
+  
+  .image-medium {
+    margin-right: 0;
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel .carousel-item {
+    height: auto;
+    min-height: 500px;
+  }
+  
+  .blue-shape-content {
+    flex-direction: column;
+  }
+  
+  .image-medium {
+    width: 80%;
+    margin-top: 2rem;
+  }
 }

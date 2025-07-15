@@ -1,32 +1,23 @@
-/* UnderlineTab.css */
+/* UnderlineTab.css - Versión simplificada */
 .nav-underline .nav-link {
-    /* Copia los mismos estilos que tienes en .btn--navbutton */
-    background-color: var(--full-white); /* Color gris inicial */
-    color: var(--neutral-gray); /* Texto blanco para mejor contraste */
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-medium);
-    padding: var(--spacing-sm) var(--spacing-md);
-    transition: all 0.3s ease; /* Transición suave */
-    cursor: pointer;
-  }
-  
- .nav-underline .nav-link:hover,
-  .nav-underline .nav-link:focus {
-    background-color: var(--full-white); /* Color secundario al hacer hover */
-    color: var(--secondary-color); /* Mantener texto blanco */
-    border-color: var(--secondary-color); 
-    font-weight: var(--font-weight-bold);
-  }
-  
-  .nav-underline .nav-link.active {
-    color: var(--secondary-color);
-    border-bottom: 2px var(--secondary-color);
-  }
-  
-  /* Si quieres exactamente los mismos estilos que tu navbutton: */
-  .custom-nav-underline .nav-link {
-    background-color: var(--full-white); /* Color secundario al hacer hover */
-    color: var(--neutral-gray); /* Mantener texto blanco */
-    border-color: var(--secondary-color); 
-    font-weight: var(--font-weight-bold);
-  }
+  background: var(--full-white);
+  color: var(--neutral-gray);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-bottom: 3px solid var(--neutral-gray-50-opacity);
+  margin: 0 var(--spacing-xs);
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-underline .nav-link:hover {
+  color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+}
+
+.nav-underline .nav-link.active {
+  color: var(--neutral-very-dark-blue);
+  font-weight: var(--font-weight-bold);
+  border-bottom-color: var(--secondary-color);
+}

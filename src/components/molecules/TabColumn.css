@@ -1,0 +1,53 @@
+/* Versión invertida del two-columns */
+.two-columns {
+    display: flex;
+    width: 100%;
+    margin: var(--spacing-xs) auto;
+    max-width: 1500px;
+    flex-direction: row-reverse; /* Cambio principal para invertir */
+  }
+  
+  .left-col {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+  
+  .right-col {
+    flex: 1;
+    position: relative;
+    margin-left: var(--spacing-xs);
+  }
+  
+  /* Responsive - Ajustes para la versión invertida */
+  @media (max-width: 1024px) {
+    .two-columns {
+      width: 85%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .two-columns {
+      width: 90%;
+      flex-direction: column; /* En móvil volvemos al orden normal */
+    }
+    
+    .right-col {
+      height: 300px;
+      order: -1; /* Aseguramos que la imagen quede arriba en móvil */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .two-columns {
+      width: 95%;
+    }
+  }
