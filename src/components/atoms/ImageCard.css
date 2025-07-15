@@ -1,27 +1,26 @@
-/* Contenedor principal */
+
 .image-card-container {
-    margin: 1rem 0; /* Margen vertical */
-    padding: 0.5rem; /* Espacio interno */
-    box-sizing: 200px; /* Incluye padding en el ancho total */
-    display: inline-block; /* Ajusta al contenido */
-    max-width: 100%; /* No exceder el ancho del contenedor padre */
+    margin: 1rem 0; 
+    padding: 0.5rem; 
+    box-sizing: 200px; 
+    display: inline-block;
+    max-width: 100%; 
   }
   
-  /* La imagen en sí */
+ 
   .image-card {
-    height: auto; /* Mantiene proporciones */
-    display: block; /* Elimina espacio inferior por inline */
-    border-radius: 10px; /* Bordes redondeados */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    height: auto; 
+    display: block; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
   }
   
-  /* Efecto hover para interactividad */
+
   .image-card:hover {
-    transform: translateY(-2px); /* Levanta ligeramente */
-    
+    transform: translateY(-2px); 
   }
   
-  /* Clases de margen adicionales (opcionales) */
+  
   .margin-sm {
     margin: 0.5rem;
   }

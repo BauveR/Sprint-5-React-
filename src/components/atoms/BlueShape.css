@@ -1,4 +1,4 @@
-/* BlueShape.css actualizado */
+
 .blue-shape-container {
   position: relative;
   width: 100%;
@@ -12,7 +12,7 @@
   z-index: 0;
   top: 170px;
   left: 200px;
-  width: 120%;
+  width: 160%;
   height: 90%;
   background-color: var(--primary-color);
   border-bottom-left-radius: 15rem;
@@ -21,16 +21,12 @@
 
 .blue-shape-container.right .blue-shape-background {
   left: auto;
-  right: 40%; /* Extiende la forma fuera del contenedor */
-
-  /* Dimensiones */
-  width: 110%; /* Ancho extendido */
-  height: 80%; /* Altura relativa */
-  
-  /* Bordes redondeados solo en lado derecho */
+  right: 10%; 
+  width: 160%; 
+  height: 80%; 
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  border-bottom-right-radius: 15rem; /* 240px si prefieres valores fijos */
+  border-bottom-right-radius: 15rem; 
   border-top-right-radius: 15rem;
 }
 
@@ -45,12 +41,11 @@
   padding: 1rem;
 }
 
-/* Estilos para el carousel */
+
 .carousel .carousel-item {
-  height: 800px; /* Ajusta según necesites */
+  height: 800px; 
 }
 
-/* Estilos de imagen */
 .image-medium {
   width:200%;
   max-width: 900px;
@@ -58,7 +53,7 @@
   margin-right: 5rem;
 }
 
-/* Responsive */
+
 @media (max-width: 992px) {
   .blue-shape-background {
     width: 100%;

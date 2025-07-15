@@ -27,7 +27,6 @@
     padding-bottom: 5rem;
   }
   
-  /* Estilos para el Accordion */
   .accordion {
     width: 100%;
     border-radius: 8px;
@@ -36,25 +35,25 @@
   
   .accordion-item {
     margin-bottom: 1rem;
-    border: 1px solid #e9ecef;
+    border: 1px solid var(--neutral-light-gray);
     border-radius: 8px;
     overflow: hidden;
   }
   
   .accordion-header button {
     font-weight: 600;
-    background-color: var (--primary-light);
+    background-color: var(--full-white);
   }
   
   .accordion-header button:not(.collapsed) {
-    background-color:var (--secondary-color);
+    background-color:var(--brand-white);
+    color: var(--secondary-color);
   }
   
   .accordion-body {
-    background-color: #fff;
+    background-color:var(--full-white);
   }
   
-  /* Media query para pantallas pequeñas */
   @media (max-width: 768px) {
     .acordion-container {
       padding: 1rem;

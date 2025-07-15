@@ -1,5 +1,4 @@
-// components/molecules/ThreeCardsLayout.tsx
-export interface CardData {  // <-- Añade 'export'
+export interface CardData {  
     imageSrc: string;
     imageAlt: string;
     featuredText: string;

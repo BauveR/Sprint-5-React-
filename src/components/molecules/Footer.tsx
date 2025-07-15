@@ -26,9 +26,13 @@ interface FooterProps {
       onClick: () => void;
       variant?: 'primary' | 'secondary' | 'ghost' | 'outlined' | 'navbutton'| 'footer';
     }>;
+    socialIcons?: Array<{
+      iconSrc: string;
+      altText: string;
+      url: string;
+    }>;
   };
 }
-
 const Footer: React.FC<FooterProps> = ({ emailSection, navigationSection }) => {
   const [email, setEmail] = React.useState('');
 
@@ -91,6 +95,19 @@ const Footer: React.FC<FooterProps> = ({ emailSection, navigationSection }) => {
         </Button>
       ))}
     </div>
+    {navigationSection.socialIcons && (
+      <div className="footer-social-icons">
+        {navigationSection.socialIcons.map((social, index) => (
+          <a key={`social-icon-${index}`} href={social.url} target="_blank" rel="social media" aria-label={social.altText}>
+            <img 
+              src={social.iconSrc} 
+              alt={social.altText} 
+              className="footer-social-icon"
+            />
+          </a>
+        ))}
+      </div>
+    )}
   </div>
 </footer>
     </>

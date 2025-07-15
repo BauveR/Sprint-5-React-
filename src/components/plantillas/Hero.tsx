@@ -1,11 +1,8 @@
 import type React from 'react';
 import TwoColumns from '../molecules/TwoColumns';
 
-
-
-
 const Hero: React.FC = () => {
-    // Estos son los valores por defecto para el Hero
+  
     const heroData = {
       title: "A Simple Bookmark Manager",
       description: "A clean and simple Interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.",

@@ -15,7 +15,6 @@
   flex-wrap: wrap; 
 }
 
-
 .three-cards-container.vertical {
   flex-direction: column;
   align-items: center;

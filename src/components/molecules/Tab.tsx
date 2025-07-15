@@ -6,7 +6,7 @@ import TextSecondary from '../atoms/TextSecondary';
 interface UnderlineTabProps {
   defaultActiveKey: string;
   onSelect?: (eventKey: string | null) => void;
-  featuredText?: string; // Hacer opcional si no siempre se usa
+  featuredText?: string;
   featuredTextSize?: 'xxl' | 'default';
   description?: string;
 }
@@ -14,7 +14,7 @@ interface UnderlineTabProps {
 function UnderlineTab({ 
   defaultActiveKey, 
   onSelect,
-  featuredText = "Features", // Valor por defecto
+  featuredText = "Features", 
   featuredTextSize = 'default',
   description = "Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go."
 }: UnderlineTabProps) {

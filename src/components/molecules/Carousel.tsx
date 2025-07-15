@@ -5,7 +5,7 @@ import TabColumn from './TabColumn';
 
 interface ControlledCarouselProps {
     activeIndex: number;
-    onSelect?: (selectedIndex: number) => void; // Hacer opcional para evitar advertencias
+    onSelect?: (selectedIndex: number) => void; 
   }
   
   function ControlledCarousel({ activeIndex, onSelect }: ControlledCarouselProps) {

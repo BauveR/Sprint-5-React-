@@ -42,7 +42,6 @@ const TwoColumns: React.FC<TwoColumnsProps> = ({
         </div>
       </div>
       
-      {/* Columna Derecha - Imagen con BlueShape */}
       <div className="right-col">
         <BlueShape align="left" height="80%">
           <img src={imageUrl} alt="Feature" className="feature-img" />

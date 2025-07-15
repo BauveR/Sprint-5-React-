@@ -3,14 +3,14 @@ import ImageCard from '../atoms/ImageCard';
 import FeaturedText from '../atoms/FeaturedText';
 import TextSecondary from '../atoms/TextSecondary';
 import { Button } from '../atoms/Button';
-import SvgIcon from '../atoms/SvgIcon'; // Asegúrate de que la ruta sea correcta
+import SvgIcon from '../atoms/SvgIcon'; 
 import './Card.css';
 
 interface CardProps {
     imageSrc: string;
     imageAlt: string;
-    featuredText: string; // Añadido el texto destacado como prop
-    featuredTextSize?: 'xxl' | 'default'; // Prop para controlar el tamaño
+    featuredText: string; 
+    featuredTextSize?: 'xxl' | 'default'; 
     description: string;
     svgIconSrc?: string;
     svgIconAlt?: string;

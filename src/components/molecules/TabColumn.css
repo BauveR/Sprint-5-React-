@@ -28,7 +28,6 @@
   border-radius: inherit;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .two-columns-standard {
     gap: 2rem;

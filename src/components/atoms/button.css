@@ -67,18 +67,18 @@ button {
 }
 
 .btn--navbutton {
-    background-color: var(--full-white); /* Color gris inicial */
-    color: var(--neutral-gray); /* Texto blanco para mejor contraste */
+    background-color: var(--full-white); 
+    color: var(--neutral-gray); 
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
     padding: var(--spacing-sm) var(--spacing-md);
-    transition: all 0.3s ease; /* Transición suave */
+    transition: all 0.3s ease; 
     cursor: pointer;
 }
 
 .btn--navbutton:hover {
-    background-color: var(--full-white); /* Color secundario al hacer hover */
-    color: var(--secondary-color); /* Mantener texto blanco */
+    background-color: var(--full-white); 
+    color: var(--secondary-color); 
     border-color: var(--secondary-color); 
     font-weight: var(--font-weight-bold);
 }
@@ -104,16 +104,16 @@ button {
 }
 
 .btn--footer {
-    color: var(--full-white); /* Texto blanco para mejor contraste */
+    color: var(--full-white); 
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
     padding: var(--spacing-sm) var(--spacing-md);
-    transition: all 0.3s ease; /* Transición suave */
+    transition: all 0.3s ease; 
     cursor: pointer;
 }
 
 .btn--footer:hover {
-    color: var(--secondary-color); /* Mantener texto blanco */
+    color: var(--secondary-color); 
     border-color: var(--secondary-color); 
     font-weight: var(--font-weight-bold);
 }

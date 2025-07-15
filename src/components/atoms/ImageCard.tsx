@@ -1,11 +1,11 @@
 import React from 'react';
-import './ImageCard.css'; // Importamos el CSS
+import './ImageCard.css'; 
 
 interface ImageProps {
   src: string;
   alt: string;
   width?: string | number;
-  className?: string; // Prop opcional para clases adicionales
+  className?: string; 
 }
 
 const ImageCard: React.FC<ImageProps> = ({ 

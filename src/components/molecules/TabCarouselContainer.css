@@ -24,8 +24,6 @@
 }
 
 
-
-/* Responsive */
 @media (max-width: 768px) {
   .tab-carousel-container {
     gap: 1.5rem;

@@ -25,7 +25,7 @@ function Acordion({
   return (
 
     <div className="acordion-container">
-    {/* Sección de texto destacado */}
+  
     <div className="acordion-header">
       <FeaturedText 
         center={true}
@@ -36,7 +36,6 @@ function Acordion({
       <TextSecondary center={true}>{description}</TextSecondary>
     </div>
 
-    {}
     <div className="acordion-content">
       <Accordion defaultActiveKey={['0']} alwaysOpen>
         <Accordion.Item eventKey="0">
@@ -73,7 +72,6 @@ function Acordion({
       </Accordion>
     </div>
 
-    {/* Botón */}
     <div className="card-button-container">
       <Button variant="primary" onClick={onButtonClick}>
         {buttonText}

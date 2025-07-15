@@ -24,14 +24,13 @@ const TabColumn: React.FC<TabColumnProps> = ({
 }) => {
   return (
     <div className="two-columns-standard">
-      {/* Columna Izquierda - Imagen con BlueShape */}
+   
       <div className="left-col">
         <BlueShape align="right" height="500px">
           <img src={imageUrl} alt="Feature" className="feature-image" />
         </BlueShape>
       </div>
       
-      {/* Columna Derecha - Texto y Botones */}
       <div className="right-col">
         <FeaturedText 
           className="featured-text" 

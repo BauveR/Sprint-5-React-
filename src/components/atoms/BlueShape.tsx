@@ -5,16 +5,16 @@ interface BlueShapeProps {
   children: React.ReactNode;
   height?: string;
   className?: string;
-  align?: 'left' | 'right'; // Nueva prop para alineación
+  align?: 'left' | 'right'; 
 }
 
 const BlueShape: React.FC<BlueShapeProps> = ({
   children,
   height = '400px',
   className = '',
-  align = 'left' // Valor por defecto
+  align = 'left' 
 }) => {
-  // Determinar la clase de alineación
+
   const alignmentClass = align === 'right' ? 'right' : '';
   
   return (
