@@ -1,4 +1,3 @@
-/* CTAs */
 button {
     border: none;
     background: transparent;
@@ -9,43 +8,42 @@ button {
 
 .btn--primary {
     background-color: var(--primary-color); 
-    color: var(--full-white); /* Texto blanco para mejor contraste */
+    color: var(--full-white); 
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
     padding: var(--spacing-sm) var(--spacing-xl);
     border-radius: var(--border-radius-md);
-    border: 2px solid transparent; /* Borde transparente inicial */
-    transition: all 0.3s ease; /* Transición suave */
+    border: 2px solid transparent; 
+    transition: all 0.3s ease; 
     cursor: pointer;
 }
 
 .btn--primary:hover {
-    background-color: var(--full-white); /* Color secundario al hacer hover */
-    color: var(--primary-color); /* Mantener texto blanco */
-    border-color: var(--primary-color); /* Borde del mismo color */
+    background-color: var(--full-white);
+    color: var(--primary-color); 
+    border-color: var(--primary-color); 
     box-shadow: 6px 5px 10px var(--transparent-grey);
 }
 
 .btn--ghost {
 
-    background-color: var(--neutral-off-whit); /* Color gris inicial */
-    color: var(--neutral-very-dark-blue); /* Texto blanco para mejor contraste */
+    background-color: var(--neutral-off-white); /* Corregido el nombre */
+    color: var(--neutral-very-dark-blue);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
     padding: var(--spacing-sm) var(--spacing-xl);
     border-radius: var(--border-radius-md);
-    border: 2px solid transparent; /* Borde transparente inicial */
-    transition: all 0.3s ease; /* Transición suave */
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
     cursor: pointer;
-}
-
+    }
+    
 .btn--ghost:hover {
-
-    background-color: var(--neutral-off-white); /* Color secundario al hacer hover */
-    color: var(--neutral-dark-blue); /* Mantener texto blanco */
-    border-color: var(--neutral-dark-blue); /* Borde del mismo color */
+    background-color: var(--neutral-off-white);
+    color: var(--neutral-dark-blue);
+    border-color: var(--neutral-dark-blue);
     box-shadow: 6px 5px 10px var(--transparent-grey);
-}
+    }
 
 .btn--secondary {
     background-color: var(--secondary-color); /* Color gris inicial */

@@ -25,24 +25,25 @@ const Navbar: React.FC<NavbarProps> = ({ logo, navItems }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="navbar">
-      <div className="navbar-container">
-        <div className="navbar-logo-container">
-          <Logo src={logo.src} alt={logo.alt} width={logo.width} />
+    <> {/* Fragmento para agrupar sin añadir nodo extra al DOM */}
+      <header className="navbar">
+        <div className="navbar-container">
+          <div className="navbar-logo-container">
+            <Logo src={logo.src} alt={logo.alt} width={logo.width} />
+          </div>
+
+          <div className="desktop-menu">
+            {navItems.map((item, index) => (
+              <Button key={`nav-btn-${index}`} variant={item.variant || 'ghost'} onClick={item.onClick}>
+                {item.label}
+              </Button>
+            ))}
+          </div>
+
+          <BurgerButton isOpen={isMenuOpen} onClick={() => setIsMenuOpen(!isMenuOpen)} />
         </div>
+      </header>
 
-        <div className="desktop-menu">
-          {navItems.map((item, index) => (
-            <Button key={`nav-btn-${index}`} variant={item.variant || 'ghost'} onClick={item.onClick}>
-              {item.label}
-            </Button>
-          ))}
-        </div>
-
-        <BurgerButton isOpen={isMenuOpen} onClick={() => setIsMenuOpen(!isMenuOpen)} />
-      </div>
-
-      {/* Menú móvil */}
       <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
         {navItems.map((item, index) => (
           <Button
@@ -58,7 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({ logo, navItems }) => {
           </Button>
         ))}
       </div>
-    </header>
+    </>
   );
 };
 

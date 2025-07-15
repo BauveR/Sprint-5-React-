@@ -2,44 +2,58 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem var(--container-padding); /* Usamos variable para consistencia */
+  padding: 1rem var(--container-padding); 
   background-color: var(--full-white);
   position: sticky;
   top: 0;
-  box-shadow: var(--shadow-sm);
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
   z-index: 100;
 }
 
-/* Contenedor principal para centrar el contenido */
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: var(--max-container-width); /* Ej: 1200px */
+  max-width: var(--max-container-width);
   margin: 0 auto;
-  padding: 0 var(--container-padding); /* Mismo padding que el navbar */
+  padding: 0 var(--container-padding); 
 }
 
 .navbar-logo-container {
   z-index: 101;
-  margin-right: auto; /* Empuja el logo a la izquierda */
+  margin-right: auto;
+  transition: filter 0.3s ease; 
 }
 
 .desktop-menu {
   display: flex;
-  gap: 1.5rem; /* Más espacio entre items */
-  margin-left: 2rem; /* Separación del logo */
+  gap: 1.5rem;
+  margin-left: 1rem;
 }
 
-/* Botón burger - posición y tamaño */
 .burger-button {
-  margin-left: auto; /* Lo coloca a la derecha */
-  padding: 0.5rem; /* Espacio alrededor del icono */
+  margin-left: auto;
+  padding: 0.5rem;
   z-index: 101;
+  transition: filter 0.3s ease; 
+}
+
+
+.mobile-menu.open ~ .navbar .navbar-logo-container img,
+.mobile-menu.open ~ .navbar .burger-button {
+  filter: brightness(0) invert(1);
+}
+
+.mobile-menu.open ~ .navbar .burger-line {
+  background: white !important;
+}
+
+
+.mobile-menu.open ~ .navbar .navbar-logo-container svg path {
+  fill: white !important;
 }
 
 .mobile-menu {
@@ -52,12 +66,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Alineación desde arriba */
+  justify-content: flex-start;
   gap: 2rem;
   transform: translateX(100%);
   transition: transform 0.3s ease;
   z-index: 99;
-  padding: 6rem var(--container-padding) 2rem; /* Padding consistente */
+  padding: 6rem var(--container-padding) 2rem;
 }
 
 .mobile-menu.open {
@@ -67,17 +81,31 @@
 .mobile-menu-item {
   width: 100%;
   max-width: 300px;
-  padding: 0.75rem 1rem; /* Espaciado interno */
+  padding: 1rem 1rem;
 }
 
-/* Responsive */
+
+.mobile-menu .btn--ghost {
+  background: transparent;
+  color: var(--full-white);
+  border: 2px solid var(--full-white);
+  width: 100%;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.mobile-menu .btn--ghost:hover {
+  background: var(--full-white);
+  color: var(--neutral-very-dark-blue);
+}
+
 @media (max-width: 768px) {
   .desktop-menu {
     display: none;
   }
 
   .burger-button {
-    display: flex; /* Asegura que sea visible en móvil */
+    display: flex;
   }
 }
 

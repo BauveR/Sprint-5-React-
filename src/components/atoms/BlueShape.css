@@ -12,7 +12,7 @@
   z-index: 0;
   top: 170px;
   left: 200px;
-  width: 160%;
+  width: 146%;
   height: 90%;
   background-color: var(--primary-color);
   border-bottom-left-radius: 15rem;
@@ -58,12 +58,14 @@
   .blue-shape-background {
     width: 100%;
     left: 0;
-    border-radius: 0;
+    border-bottom-left-radius: 15rem;
+    border-top-left-radius: 15rem;
   }
   
   .blue-shape-container.right .blue-shape-background {
-    right: 0;
-    border-radius: 0;
+    right: 10;
+    border-bottom-right-radius: 15rem; 
+    border-top-right-radius: 15rem;
   }
   
   .blue-shape-content {
@@ -80,7 +82,7 @@
   
   .image-medium {
     margin-right: 0;
-    width: 70%;
+    width: 80%;
   }
 }
 

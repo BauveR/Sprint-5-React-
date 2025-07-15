@@ -52,4 +52,9 @@
   --max-container-width: 1200px;
   --container-padding: 2rem; 
   --dark-blue-transparent: rgba(8, 42, 82, 0.95);
+
+  --neutral-off-white: #f5f5f5;
+  --neutral-very-dark-blue: #1a1a2e;
+  --neutral-dark-blue: #16213e;
+  --full-white: #ffffff;
 }
