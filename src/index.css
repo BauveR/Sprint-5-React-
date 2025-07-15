@@ -1,5 +1,5 @@
 :root {
-  /* colors  */
+
   --primary-color: #5265E1;
   --primary-light: #e7eafb;
   --secondary-color: #FA5959;
@@ -14,7 +14,7 @@
   --dark-blue-transparent: rgba(36, 41, 70, 0.95);
   --transparent-grey: rgba(18, 17, 17, 0.266);
 
-  /* Typography */
+
   --font-family: sans-serif;
   --font-family-two: 'Lato';
   --font-size-xs: 14px;
@@ -25,13 +25,13 @@
   --font-size-xxl: 36px;
   --font-size-xxxl: 48px;
 
-  /* Font weights */
+
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 780;
 
-  /* Spacing */
+
   --spacing-xs: 8px;
   --spacing-sm: 16px;
   --spacing-md: 24px;
@@ -40,13 +40,16 @@
   --spacing-xxl: 64px;
   --spacing-xxxl: 100px;
 
-  /* Border radius */
+
   --border-radius-sm: 4px;
   --border-radius-md: 6px;
   --border-radius-lg: 10px;
 
-  /* Shadows */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 8px 16px rgba(82, 101, 225, 0.2);
+
+  --max-container-width: 1200px;
+  --container-padding: 2rem; 
+  --dark-blue-transparent: rgba(8, 42, 82, 0.95);
 }

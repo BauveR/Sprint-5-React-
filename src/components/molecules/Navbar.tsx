@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '../atoms/Button';
+import { BurgerButton } from '../atoms/BurguerButton';
 import Logo from '../atoms/Logo';
 import './Navbar.css';
 
@@ -21,24 +22,43 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ logo, navItems }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <nav className="navbar">
-      <div className="navbar-logo-container">
-        <Logo src={logo.src} alt={logo.alt} width={logo.width} />
+    <header className="navbar">
+      <div className="navbar-container">
+        <div className="navbar-logo-container">
+          <Logo src={logo.src} alt={logo.alt} width={logo.width} />
+        </div>
+
+        <div className="desktop-menu">
+          {navItems.map((item, index) => (
+            <Button key={`nav-btn-${index}`} variant={item.variant || 'ghost'} onClick={item.onClick}>
+              {item.label}
+            </Button>
+          ))}
+        </div>
+
+        <BurgerButton isOpen={isMenuOpen} onClick={() => setIsMenuOpen(!isMenuOpen)} />
       </div>
-      
-      <div className="navbar-buttons-wrapper">
+
+      {/* Menú móvil */}
+      <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
         {navItems.map((item, index) => (
           <Button
-            key={`nav-btn-${index}`}
+            key={`mobile-nav-btn-${index}`}
             variant={item.variant || 'ghost'}
-            onClick={item.onClick}
+            onClick={() => {
+              item.onClick();
+              setIsMenuOpen(false);
+            }}
+            className="mobile-menu-item"
           >
             {item.label}
           </Button>
         ))}
       </div>
-    </nav>
+    </header>
   );
 };
 
