@@ -1,5 +1,4 @@
-  
-  /* Sección Superior - Email Subscription */
+
   .footer-top-section {
     background-color: var(--primary-color);
     color: var(--light-color);
@@ -15,6 +14,11 @@
     gap: var(--spacing-lg);
   }
   
+  .footer-top-section .text-secondary.white {
+    color: var(--full-white) !important;
+    letter-spacing: 5px !important;
+  }
+  
   .footer-email-form {
     display: flex;
     gap: var(--spacing-md);
@@ -28,10 +32,10 @@
     border-radius: 4px;
     border: none;
     font-size: 1rem;
-    min-width: 200px; /* Mejor experiencia en mobile */
+    min-width: 200px; 
   }
   
-  /* Sección Inferior - Navigation */
+  
   .footer-bottom-section {
     background-color: var(--neutral-very-dark-blue);
     padding: 3rem 0rem;
@@ -46,9 +50,9 @@
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    flex-direction: row; /* Cambiado a fila */
+    flex-direction: row; 
     align-items: center;
-    justify-content: space-between; /* Distribuye el espacio */
+    justify-content: space-between; 
     gap: 2rem;
   }
   
@@ -65,8 +69,7 @@
   }
   
 
-  
-  /* Responsive Design */
+
   @media (max-width: 768px) {
     .footer-email-form {
       flex-direction: column;

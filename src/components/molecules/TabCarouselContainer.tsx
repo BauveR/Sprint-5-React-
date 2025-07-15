@@ -22,6 +22,10 @@ export default function TabCarouselContainer() {
           <UnderlineTab 
             defaultActiveKey={activeIndex.toString()}
             onSelect={handleTabSelect}
+            featuredText="Features" 
+            featuredTextSize="xxl"
+            description="Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices
+so you call access them on the go." 
           />
         </div>
         
@@ -33,4 +37,4 @@ export default function TabCarouselContainer() {
         </div>
       </div>
     );
-  }
+}

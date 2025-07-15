@@ -14,7 +14,7 @@
 
 .text-secondary.center{
     text-align: center;
-    max-width: 520px; /* Ajusta este valor según necesites */
+    max-width: 520px;
     margin: 0 auto;
     padding-bottom: var(--spacing-xxl);
     padding-top: var(--spacing-md);
@@ -22,7 +22,7 @@
  
 }
 
-.text-white{
+.text-secondary.white{
     color: var(--full-white);
 
 

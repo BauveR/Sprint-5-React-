@@ -30,7 +30,8 @@ function App() {
       <Footer
         emailSection={{
           
-          secondaryText: "Recibe las últimas actualizaciones directamente en tu correo",
+          secondaryText: "35 OOO+ ALREADY JOINED",
+          textColor: 'white',
           featuredText: "Stay up-to-date with what we're doing",
           placeholder: "tu@email.com",
           buttonText: "Suscribir",

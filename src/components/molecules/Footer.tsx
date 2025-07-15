@@ -8,7 +8,9 @@ import './Footer.css';
 interface FooterProps {
   emailSection: {
     featuredText: string;
+    textVariant?: 'white' | 'center';
     secondaryText: string;
+    textColor?: 'white' | 'default';
     placeholder: string;
     buttonText: string;
     onSubscribe: (email: string) => void;
@@ -38,11 +40,13 @@ const Footer: React.FC<FooterProps> = ({ emailSection, navigationSection }) => {
 
   return (
     <>
-      {/* Sección Superior Independiente - Email */}
+      {}
       <section className="footer-top-section">
         <div className="footer-email-content">
          
-          <TextSecondary center={true}>{emailSection.secondaryText}</TextSecondary>
+        <TextSecondary center white={emailSection.textColor === 'white'}>
+  {emailSection.secondaryText}
+</TextSecondary>
           <FeaturedText 
             center 
             white 
@@ -65,7 +69,7 @@ const Footer: React.FC<FooterProps> = ({ emailSection, navigationSection }) => {
           </form>
         </div>
       </section>
-      {/* Sección Inferior Independiente - Navegación */}
+      {}
 <footer className="footer-bottom-section">
   <div className="footer-nav-content">
     <div className="footer-logo">
