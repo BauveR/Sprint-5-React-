@@ -1,49 +1,73 @@
 .two-columns {
-    display: flex;
-    width: 80%; /* Ancho al 70% de la página */
-    margin: var(--spacing-xxxl) auto; /* Centrado horizontal */
-    max-width: 1500px; /* Máximo ancho para pantallas grandes */
+  display: flex;
+  width: 100%; 
+  padding: 0 var(--spacing-xxxl); 
+  margin: var(--spacing-xxxl) auto; 
+  max-width: 1340px;
+  box-sizing: border-box; 
+}
+
+.left-col {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%; 
+  flex-shrink: 0; 
+}
+
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+  flex-wrap: wrap; 
+}
+
+.right-col {
+  flex: 1;
+  position: relative;
+  min-height: 400px; 
+  width: 40%;
+  flex-shrink: 0;
+}
+.feature-img {
+ 
+  height: 130%;
+  object-fit: contain;
+  border-radius: inherit;
+}
+
+
+@media (max-width: 1024px) {
+  .two-columns {
+      padding: 0 var(--spacing-xl);
   }
-  
-  .left-col {
-    flex: 1;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .two-columns {
+      flex-direction: column;
+      padding: 0 var(--spacing-lg); 
   }
   
   .right-col {
-    flex: 1;
-    position: relative;
+      min-height: 300px;
+      margin-top: 2rem;
   }
   
-  /* Responsive */
-  @media (max-width: 1024px) {
-    .two-columns {
-      width: 85%; /* Un poco más ancho en tablets */
-    }
+  .buttons {
+      margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .two-columns {
+      padding: 0 var(--spacing-md);
   }
   
-  @media (max-width: 768px) {
-    .two-columns {
-      width: 90%; /* Más ancho en móviles */
-      flex-direction: column;
-    }
-    
-    .right-col {
-      height: 300px;
-    }
+  .buttons {
+      gap: 0.75rem;
   }
-  
-  @media (max-width: 480px) {
-    .two-columns {
-      width: 95%; /* Casi ancho completo en móviles pequeños */
-    }
-  }
+}

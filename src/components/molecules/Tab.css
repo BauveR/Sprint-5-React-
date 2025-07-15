@@ -4,7 +4,7 @@
   color: var(--neutral-gray);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
-  padding: var(--spacing-sm) var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-md);
   border: none;
   border-bottom: 3px solid var(--neutral-gray-50-opacity);
   margin: 0 var(--spacing-xs);

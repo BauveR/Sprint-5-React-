@@ -16,8 +16,13 @@
 .featuredtext.xxl{
     text-align: center;
     font-size: var(--font-size-lg);
-    margin-bottom: var(--spacing-md);
-   
+    margin-bottom: var(--spacing-md); 
+}
+
+.featuredtext.left{
+    text-align: left;
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-md); 
 }
 
 .featuredtext.white {

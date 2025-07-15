@@ -1,4 +1,4 @@
-/* Contenedor principal */
+
 .card {
     border-radius: 12px;
     overflow: hidden;
@@ -6,46 +6,43 @@
     background: var(--full-white);
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra todos los elementos hijos horizontalmente */
+    align-items: center; 
     max-width: 300px;
     margin: 0 auto;
     padding: 1.5rem;
     padding-top: 2rem;
     transition: transform 0.3s ease;
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    box-sizing: border-box; 
   }
   
   .card:hover {
     transform: translateY(-5px);
   }
   
-  /* Contenedor de imagen */
   .card-image-container {
     width: 50%;
     padding: 0;
     margin-bottom: 1.5rem;
   }
   
-  /* Contenedor SVG */
   .svg-container {
     width: 100%;
-    padding: 0 1.5rem;
-    margin: 1rem 0;
+    padding: 0 0rem;
+   
   }
   
-  /* Contenido de texto */
+
   .card-content {
-    padding: 0 1rem;
+  
     text-align: center;
-    width: 100%; /* Asegura que el texto ocupe todo el ancho disponible */
+    width: 100%; 
     box-sizing: border-box;
   }
   
-  /* Contenedor del botón - Versión mejorada */
   .card-button-container {
     width: 150%;
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-xs);
     display: flex;
-    justify-content: center; /* Centra el botón horizontalmente */
+    justify-content: center; 
   }
   

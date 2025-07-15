@@ -1,53 +1,64 @@
-/* Versión invertida del two-columns */
-.two-columns {
-    display: flex;
-    width: 100%;
-    margin: var(--spacing-xs) auto;
-    max-width: 1500px;
-    flex-direction: row-reverse; /* Cambio principal para invertir */
-  }
+.two-columns-standard {
+  display: flex;
+  width: 100%;
+  max-width: 1500px;
+  margin: var(--spacing-xxxl) auto;
+  padding: 0 var(--spacing-xxxl);
+  box-sizing: border-box;
+  gap: 3rem;
+  align-items: flex-start;
   
-  .left-col {
-    flex: 1;
-    padding: 2rem;
-    display: flex;
+}
+
+.two-columns-standard .left-col {
+  width: 40%;
+  flex-shrink: 0;
+  padding: 0 rem;
+}
+
+.two-columns-standard .right-col {
+  width: 60%;
+  flex-shrink: 0;
+}
+
+.feature-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: inherit;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .two-columns-standard {
+    gap: 2rem;
+    padding: 0 var(--spacing-xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .two-columns-standard {
     flex-direction: column;
-    justify-content: center;
+    padding: 0 var(--spacing-lg);
+    gap: 1.5rem;
   }
   
-  .buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 3rem;
+  .two-columns-standard .left-col,
+  .two-columns-standard .right-col {
+    width: 100%;
   }
   
-  .right-col {
-    flex: 1;
-    position: relative;
-    margin-left: var(--spacing-xs);
+  .two-columns-standard .right-col {
+    height: 300px;
   }
   
-  /* Responsive - Ajustes para la versión invertida */
-  @media (max-width: 1024px) {
-    .two-columns {
-      width: 85%;
-    }
+  .two-columns-standard .left-col {
+    padding: 1rem 0;
   }
-  
-  @media (max-width: 768px) {
-    .two-columns {
-      width: 90%;
-      flex-direction: column; /* En móvil volvemos al orden normal */
-    }
-    
-    .right-col {
-      height: 300px;
-      order: -1; /* Aseguramos que la imagen quede arriba en móvil */
-    }
+}
+
+@media (max-width: 480px) {
+  .two-columns-standard {
+    padding: 0 var(--spacing-md);
   }
-  
-  @media (max-width: 480px) {
-    .two-columns {
-      width: 95%;
-    }
-  }
+}

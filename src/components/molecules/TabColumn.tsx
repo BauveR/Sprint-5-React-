@@ -1,50 +1,53 @@
 import React from 'react';
 import BlueShape from '../atoms/BlueShape';
 import FeaturedText from '../atoms/FeaturedText';
-import Text from '../atoms/Text';
+import TextSecondary from '../atoms/TextSecondary';
 import { Button } from '../atoms/Button'; 
-import './TwoColumns.css';
-
+import './TabColumn.css';
 
 interface TabColumnProps {
-  title?: string;
+  featuredText: string;
+  featuredTextSize?: 'left' | 'default';
   description?: string;
   imageUrl?: string;
   primaryButtonText?: string;
   onPrimaryClick?: () => void;
-
 }
 
 const TabColumn: React.FC<TabColumnProps> = ({
-  title,
+  featuredText,
+  featuredTextSize = 'default',
   description,
   imageUrl,
   primaryButtonText,
   onPrimaryClick,
 }) => {
-
   return (
-    <div className="two-columns">
-    {/* Columna Izquierda - Imagen con BlueShape */}
-    <div className="left-col">
-      <BlueShape align="right" height="500px">
-        <img src={imageUrl} alt="Feature" className="feature-image" />
-      </BlueShape>
-    </div>
-    
-    {/* Columna Derecha - Texto y Botones */}
-    <div className="right-col">
-      <FeaturedText>{title}</FeaturedText>
-      <Text>{description}</Text>
+    <div className="two-columns-standard">
+      {/* Columna Izquierda - Imagen con BlueShape */}
+      <div className="left-col">
+        <BlueShape align="right" height="500px">
+          <img src={imageUrl} alt="Feature" className="feature-image" />
+        </BlueShape>
+      </div>
       
-      <div className="buttons">
-        <Button variant="primary" onClick={onPrimaryClick}>
-          {primaryButtonText}
-        </Button>
+      {/* Columna Derecha - Texto y Botones */}
+      <div className="right-col">
+        <FeaturedText 
+          className="featured-text" 
+          left={featuredTextSize === 'left'}
+        >
+          {featuredText}
+        </FeaturedText>
+        <TextSecondary>{description}</TextSecondary>
+        
+        <div className="buttons">
+          <Button variant="primary" onClick={onPrimaryClick}>
+            {primaryButtonText}
+          </Button>
+        </div>
       </div>
     </div>
-  </div>
-
   );
 };
 
